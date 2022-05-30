@@ -236,4 +236,15 @@ public class Asteroid {
         result = 31 * result + Arrays.hashCode(planetesPropers);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Asteroid{" +
+                "nom='" + nom + '\'' +
+                ", velocitat=" + velocitat +
+                ", esPerillos=" + esPerillos +
+                ", distancia=" + distancia +
+                ", diametre=" + diametre +
+                '}';
+    }
 }
