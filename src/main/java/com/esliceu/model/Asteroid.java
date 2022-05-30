@@ -32,6 +32,33 @@ public class Asteroid {
         this.diametre = diametre;
     }
 
+    public Asteroid(String nom, String nomCientific, Double velocitat, Double velocitatMinima, Double velocitatMaxima,
+                    Boolean esPerillos, int indexPerillositat, Double distancia, Double distanciaMinima,
+                    Double distanciaMaxima, Double diametre, Double altura, Double amplada, Double profunditat,
+                    String[] composicio, Double radi, Double orbita, String[] planetesPropers, Date primeraVisualitzacio,
+                    Date diaMesProximALaTerra) {
+        this.nom = nom;
+        this.nomCientific = nomCientific;
+        this.velocitat = velocitat;
+        this.velocitatMinima = velocitatMinima;
+        this.velocitatMaxima = velocitatMaxima;
+        this.esPerillos = esPerillos;
+        this.indexPerillositat = indexPerillositat;
+        this.distancia = distancia;
+        this.distanciaMinima = distanciaMinima;
+        this.distanciaMaxima = distanciaMaxima;
+        this.diametre = diametre;
+        this.altura = altura;
+        this.amplada = amplada;
+        this.profunditat = profunditat;
+        this.composicio = composicio;
+        this.radi = radi;
+        this.orbita = orbita;
+        this.planetesPropers = planetesPropers;
+        this.primeraVisualitzacio = primeraVisualitzacio;
+        this.diaMesProximALaTerra = diaMesProximALaTerra;
+    }
+
     public String getNom() {
         return nom;
     }
