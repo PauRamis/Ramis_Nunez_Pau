@@ -1,6 +1,8 @@
 package com.esliceu.model;
 
+import java.util.Arrays;
 import java.util.Date;
+import java.util.Objects;
 
 public class Asteroid {
     private String nom;
@@ -217,5 +219,21 @@ public class Asteroid {
 
     public void setDiaMesProximALaTerra(Date diaMesProximALaTerra) {
         this.diaMesProximALaTerra = diaMesProximALaTerra;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Asteroid asteroid = (Asteroid) o;
+        return indexPerillositat == asteroid.indexPerillositat && Objects.equals(nom, asteroid.nom) && Objects.equals(nomCientific, asteroid.nomCientific) && Objects.equals(velocitat, asteroid.velocitat) && Objects.equals(velocitatMinima, asteroid.velocitatMinima) && Objects.equals(velocitatMaxima, asteroid.velocitatMaxima) && Objects.equals(esPerillos, asteroid.esPerillos) && Objects.equals(distancia, asteroid.distancia) && Objects.equals(distanciaMinima, asteroid.distanciaMinima) && Objects.equals(distanciaMaxima, asteroid.distanciaMaxima) && Objects.equals(diametre, asteroid.diametre) && Objects.equals(altura, asteroid.altura) && Objects.equals(amplada, asteroid.amplada) && Objects.equals(profunditat, asteroid.profunditat) && Arrays.equals(composicio, asteroid.composicio) && Objects.equals(radi, asteroid.radi) && Objects.equals(orbita, asteroid.orbita) && Arrays.equals(planetesPropers, asteroid.planetesPropers) && Objects.equals(primeraVisualitzacio, asteroid.primeraVisualitzacio) && Objects.equals(diaMesProximALaTerra, asteroid.diaMesProximALaTerra);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(nom, nomCientific, velocitat, velocitatMinima, velocitatMaxima, esPerillos, indexPerillositat, distancia, distanciaMinima, distanciaMaxima, diametre, altura, amplada, profunditat, radi, orbita, primeraVisualitzacio, diaMesProximALaTerra);
+        result = 31 * result + Arrays.hashCode(composicio);
+        result = 31 * result + Arrays.hashCode(planetesPropers);
+        return result;
     }
 }
