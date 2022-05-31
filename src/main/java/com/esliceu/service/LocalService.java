@@ -1,23 +1,23 @@
 package com.esliceu.service;
 
-import com.esliceu.model.Asteroid;
+import com.esliceu.model.Meteorit;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class LocalService {
-    private final List<Asteroid> meteorits;
+    private final List<Meteorit> meteorits;
 
     public LocalService() {
         this.meteorits = new ArrayList<>();
     }
 
-    public List<Asteroid> findAll() throws IOException {
+    public List<Meteorit> findAll() throws IOException {
         return this.meteorits;
     }
 
-    public void add(Asteroid meteorit) {
+    public void add(Meteorit meteorit) {
         this.meteorits.add(meteorit);
     }
 

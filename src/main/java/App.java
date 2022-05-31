@@ -1,15 +1,15 @@
-import com.esliceu.controller.AsteroidController;
-import com.esliceu.model.Asteroid;
+import com.esliceu.controller.MeteoritController;
+import com.esliceu.model.Meteorit;
 
 import java.io.IOException;
 import java.util.List;
 
 public class App {
     public static void main(String[] args) throws IOException {
-        AsteroidController asteroidController = new AsteroidController();
-        List<Asteroid> meteorits = asteroidController.getAsteroids();
+        MeteoritController asteroidController = new MeteoritController();
+        List<Meteorit> meteorits = asteroidController.getAsteroids();
 
-        for (Asteroid meteorit : meteorits) {
+        for (Meteorit meteorit : meteorits) {
             System.out.println(meteorit);
         }
     }

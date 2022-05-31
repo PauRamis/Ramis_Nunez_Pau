@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Objects;
 
-public class Asteroid {
+public class Meteorit {
     private String nom;
     private String nomCientific;
     private Double velocitat;
@@ -26,7 +26,7 @@ public class Asteroid {
     private Date primeraVisualitzacio;
     private Date diaMesProximALaTerra;
 
-    public Asteroid(String nom, Double velocitat, Boolean esPerillos, Double distancia, Double diametre) {
+    public Meteorit(String nom, Double velocitat, Boolean esPerillos, Double distancia, Double diametre) {
         this.nom = nom;
         this.velocitat = velocitat;
         this.esPerillos = esPerillos;
@@ -34,7 +34,7 @@ public class Asteroid {
         this.diametre = diametre;
     }
 
-    public Asteroid(String nom, String nomCientific, Double velocitat, Double velocitatMinima, Double velocitatMaxima,
+    public Meteorit(String nom, String nomCientific, Double velocitat, Double velocitatMinima, Double velocitatMaxima,
                     Boolean esPerillos, int indexPerillositat, Double distancia, Double distanciaMinima,
                     Double distanciaMaxima, Double diametre, Double altura, Double amplada, Double profunditat,
                     String[] composicio, Double radi, Double orbita, String[] planetesPropers, Date primeraVisualitzacio,
@@ -225,7 +225,7 @@ public class Asteroid {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Asteroid asteroid = (Asteroid) o;
+        Meteorit asteroid = (Meteorit) o;
         return indexPerillositat == asteroid.indexPerillositat && Objects.equals(nom, asteroid.nom) && Objects.equals(nomCientific, asteroid.nomCientific) && Objects.equals(velocitat, asteroid.velocitat) && Objects.equals(velocitatMinima, asteroid.velocitatMinima) && Objects.equals(velocitatMaxima, asteroid.velocitatMaxima) && Objects.equals(esPerillos, asteroid.esPerillos) && Objects.equals(distancia, asteroid.distancia) && Objects.equals(distanciaMinima, asteroid.distanciaMinima) && Objects.equals(distanciaMaxima, asteroid.distanciaMaxima) && Objects.equals(diametre, asteroid.diametre) && Objects.equals(altura, asteroid.altura) && Objects.equals(amplada, asteroid.amplada) && Objects.equals(profunditat, asteroid.profunditat) && Arrays.equals(composicio, asteroid.composicio) && Objects.equals(radi, asteroid.radi) && Objects.equals(orbita, asteroid.orbita) && Arrays.equals(planetesPropers, asteroid.planetesPropers) && Objects.equals(primeraVisualitzacio, asteroid.primeraVisualitzacio) && Objects.equals(diaMesProximALaTerra, asteroid.diaMesProximALaTerra);
     }
 
@@ -239,7 +239,7 @@ public class Asteroid {
 
     @Override
     public String toString() {
-        return "Asteroid{" +
+        return "Meteorit{" +
                 "nom='" + nom + '\'' +
                 ", velocitat=" + velocitat +
                 ", esPerillos=" + esPerillos +
